@@ -28,6 +28,6 @@ export default class Item {
 
     constructor(name: string, content?: string) {
         this._name = name;
-		if(content) this.content = content;
+		if (content) this.content = content;
     }
 }

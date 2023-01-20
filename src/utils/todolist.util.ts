@@ -28,7 +28,7 @@ export default class ToDoList {
 		/**
 		 * Check if item can be insert
 		 */
-		if (Math.round(moment.duration({from: this.lastInsert, to: moment()}).as("minutes")) < 30) throw new Error("Too early to add another item");
+		// if (Math.round(moment.duration({from: this.lastInsert, to: moment()}).as("minutes")) < 30) throw new Error("Too early to add another item");
 		if (this.items.has(item.name) || this.items.size >= 10) throw new Error("Duplicate item or list full");
 
 		/**

@@ -3,12 +3,12 @@ import RegexUtil from "./regex.util";
 
 import ToDoList from "./todolist.util";
 import Item from "./item.util";
-import EmailSenderService from "src/services/emailsender.service";
+import EmailSenderService from "../services/emailsender.service";
 
 export enum UserErrors {
 	InvalidName = -1,
 	InvalidEmail = -2,
-	InvalidBirthdate = -3
+	InvalidBirthdate = -3,
 }
 
 export default class User {
@@ -17,10 +17,9 @@ export default class User {
 	private _birthdate: moment.Moment = moment();
 	private _todolist: ToDoList | null = null;
 
-	constructor(name: string, email: string, birthdate: moment.Moment){
+	constructor(name: string, email: string){
 		this.name = name;
 		this.email = email;
-		this.birthdate = birthdate;
 	}
 
 	get name(): string {
